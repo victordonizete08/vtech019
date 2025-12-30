@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html>
+  
+  </body>
+</html><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTECH | iPhone Campinas-SP</title>
+    <meta name="description" content="VTECH - Referência em iPhones em Campinas-SP. Trabalhamos com iPhones a partir do 11. Aparelhos Apple selecionados, testados e com garantia.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FFFFFF; /* Fundo branco */
+            --secondary: #F8F9FA; /* Fundo secundário mais claro */
+            --accent: #007AFF; /* Azul Apple original */
+            --accent-light: rgba(0, 122, 255, 0.1); /* Azul claro para hover */
+            --light: #1D1D1F; /* Texto escuro (invertido) */
+            --light-gray: #86868B; /* Cinza médio */
+            --dark-gray: #424245; /* Cinza escuro */
+            --card-bg: #FFFFFF; /* Fundo dos cards branco */
+            --glass-bg: rgba(255, 255, 255, 0.8); /* Vidro mais claro */
+            --glass-border: rgba(0, 0, 0, 0.08); /* Borda clara */
+            --gradient: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%); /* Gradiente claro */
+            --gradient-accent: linear-gradient(135deg, #007AFF 0%, #5856D6 100%); /* Gradiente azul Apple */
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.08); /* Sombra suave */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--primary);
+            color: var(--light);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            line-height: 1.1;
+            color: #000000; /* Títulos pretos para contraste */
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Glassmorphism effect - ajustado para tema claro */
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 24px 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 700;
+            color: #000000; /* Logo preta */
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #000000 0%, #333333 50%, #000000 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 48px;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: #000000; /* Links pretos */
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            position: relative;
+            padding: 8px 0;
+            transition: color 0.3s;
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nav-link:hover {
+            color: var(--accent);
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #000000 0%, #333333 50%, #000000 100%);;
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(0, 122, 255, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 122, 255, 0.3);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #000000;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 120px;
+            overflow: hidden;
+            background: var(--gradient);
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient);
+            z-index: -2;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 72px;
+            margin-bottom: 24px;
+            background: linear-gradient(to right, #000000 30%, #424245 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-text p {
+            font-size: 20px;
+            color: var(--dark-gray);
+            margin-bottom: 48px;
+            max-width: 500px;
+        }
+
+        .hero-highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .hero-image-container {
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .floating-iphone {
+            width: 100%;
+            max-width: 500px;
+            transform-style: preserve-3d;
+            animation: float 6s ease-in-out infinite;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotateX(5deg) rotateY(5deg); }
+            50% { transform: translateY(-20px) rotateX(5deg) rotateY(5deg); }
+        }
+
+        /* Products Section */
+        .products {
+            padding: 120px 0;
+            background: var(--secondary);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-size: 56px;
+            margin-bottom: 16px;
+            background: linear-gradient(to right, #000000 30%, #424245 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--dark-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 40px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid var(--glass-border);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .product-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top right, rgba(0, 122, 255, 0.1), transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .product-card:hover:before {
+            opacity: 1;
+        }
+
+        .product-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #000000 0%, #333333 50%, #000000 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 32px;
+            color: white;
+        }
+
+        .product-title {
+            font-size: 28px;
+            margin-bottom: 16px;
+            color: #000000;
+        }
+
+        .product-card p {
+            color: var(--dark-gray);
+        }
+
+        .product-features {
+            list-style: none;
+            margin: 24px 0;
+            text-align: left;
+        }
+
+        .product-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            color: var(--dark-gray);
+        }
+
+        .product-features i {
+            color: var(--accent);
+            font-size: 14px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 120px 0;
+            position: relative;
+            background: var(--primary);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 56px;
+            margin-bottom: 24px;
+            color: #000000;
+        }
+
+        .about-text p {
+            font-size: 18px;
+            color: var(--dark-gray);
+            margin-bottom: 32px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #000000 0%, #333333 50%, #000000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            color: var(--dark-gray);
+            font-size: 16px;
+        }
+
+        .location-card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 40px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow);
+        }
+
+        .location-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #000000 0%, #333333 50%, #000000 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 32px;
+            color: white;
+        }
+
+        .location-card h3 {
+            font-size: 32px;
+            margin-bottom: 16px;
+            color: #000000;
+        }
+
+        .location-card p {
+            color: var(--dark-gray);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 120px 0;
+            background: var(--secondary);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #000000 0%, #333333 50%, #000000 100%);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+            color: white;
+        }
+
+        .contact-text h4 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            color: #000000;
+        }
+
+        .contact-text p {
+            color: var(--dark-gray);
+        }
+
+        .contact-form {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 50px;
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: #000000;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: #000000;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: white;
+            box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            padding: 80px 0 40px;
+            border-top: 1px solid var(--glass-border);
+            background: var(--primary);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-logo {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #000000;
+        }
+
+        .footer-description {
+            color: var(--dark-gray);
+            margin-bottom: 32px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: var(--secondary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000000;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid var(--glass-border);
+        }
+
+        .social-link:hover {
+            background: var(--gradient-accent);
+            color: white;
+            transform: translateY(-3px);
+            border-color: var(--accent);
+        }
+
+        .footer-heading {
+            font-size: 18px;
+            margin-bottom: 24px;
+            color: #000000;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid var(--glass-border);
+            color: var(--dark-gray);
+            font-size: 14px;
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            z-index: 999;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+            background: #128C7E;
+        }
+
+        .whatsapp-text {
+            position: absolute;
+            right: 70px;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateX(10px);
+            transition: all 0.3s;
+            color: white;
+        }
+
+        .whatsapp-float:hover .whatsapp-text {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .hero-text h1 {
+                font-size: 60px;
+            }
+            
+            .section-title {
+                font-size: 48px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                padding: 0 24px;
+            }
+            
+            .hero-content,
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+            
+            .hero-text h1 {
+                font-size: 48px;
+            }
+            
+            .section-title {
+                font-size: 40px;
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 300px;
+                height: 100vh;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 100px 40px;
+                transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                z-index: 999;
+                border-left: 1px solid var(--glass-border);
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .nav-link {
+                color: #000000;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 40px;
+            }
+            
+            .section-title {
+                font-size: 36px;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+            
+            .hero-text h1 {
+                font-size: 32px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .contact-form {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <img src="https://i.postimg.cc/G2gXY2Jf/Logo-vtech-branca.png" alt="Logo VTech" width="30" height="30">
+                    </div>
+                    VTECH
+                </a>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link">Início</a></li>
+                    <li><a href="#products" class="nav-link">iPhones</a></li>
+                    <li><a href="#about" class="nav-link">Sobre</a></li>
+                    <li><a href="#contact" class="nav-link">Contato</a></li>
+                </ul>
+                
+                <a href="https://w.app/ebbocy" target="_blank" class="cta-button">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content fade-in">
+                <div class="hero-text">
+                    <h1>Procurando seu <span class="hero-highlight">novo iPhone?</span></h1>
+                    <p>iPhones novos e seminovos na Vtech. Aceitamos seu iPhone na troca, entre em contato para mais informações!</p>
+                    <div class="hero-buttons">
+                        <a href="https://w.app/ebbocy" target="_blank" class="cta-button">
+                            <i class="fab fa-whatsapp"></i>
+                            Chamar no WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image-container">
+                    <img src="https://i.postimg.cc/FHwjwGBh/IMG-2145.jpg" alt="Diversos modelos de iPhone VTECH" class="floating-iphone">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Por que comprar na Vtech?</h2>
+                <p class="section-subtitle">Trabalhamos com todos os modelos da Apple, dos mais recentes lançamentos aos modelos que continuam revolucionando o mercado.</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card fade-in">
+                    <div class="product-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="product-title">Garantia Estendida</h3>
+                    <p>Tranquilidade e segurança na sua compra.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check"></i> Todos os aparelhos com garantia</li>
+                        <li><i class="fas fa-check"></i> Cobertura de 3 meses</li>
+                    </ul>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <div class="product-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                      <h3 class="product-title">Pagamento Facilitado</h3>
+                     <p>Flexibilidade para você adquirir seu produto.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check"></i> Parcelamento em até 12x</li>
+                        <li><i class="fas fa-check"></i> Transações 100% seguras</li>
+                    </ul>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <div class="product-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                     <h3 class="product-title">Upgrade Program</h3>
+                    <p>Atualize seu iPhone com facilidade.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check"></i> Aceitamos seu iPhone antigo</li>
+                        <li><i class="fas fa-check"></i> Troca por um modelo novo</li>
+                        <li><i class="fas fa-check"></i> Avaliação justa do seu aparelho</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content fade-in">
+                <div class="about-text">
+                    <h2>Somos especializados em produtos Apple</h2>
+                    <p>
+                A <strong>Vtech</strong> é uma loja especializada em revenda de produtos Apple. Focamos em entregar uma experiência completa para os nossos clientes com ótimo atendimento e suporte. Atendemos grande parte da região metropoliana de Campinas-SP, para você comprar seu novo iPhone ou trocá-lo. Além dos iPhones, iPads, Apple Watches e diversos acessórios para seu iPhone. Estamos prontos para te atender, nos chame no whatsapp e tenha um atentimento personalizado!
+            </p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">+5</div>
+                            <div class="stat-label">Anos de Experiência</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Produtos Originais</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">+2K</div>
+                            <div class="stat-label">Clientes Satisfeitos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24h</div>
+                            <div class="stat-label">Suporte Técnico</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="location-card glass fade-in">
+                    <div class="location-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Campinas - SP</h3>
+                    <p>Atendemos toda a região metropolitana de Campinas com entrega ágil e serviço especializado.</p>
+                    <p style="margin-top: 20px; color: var(--accent);">
+                        <i class="fas fa-star"></i> Referência em produtos Apple
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Conecte-se Conosco</h2>
+                <p class="section-subtitle">Tire suas dúvidas, conheça nossos produtos!</p>
+            </div>
+            
+            <div class="contact-content fade-in">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Campinas - SP</h4>
+                            <p>Atendemos toda região Metropolitana</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>WhatsApp</h4>
+                            <p>(19) 99180-3390</p>
+                            <p style="color: var(--accent); font-size: 14px; margin-top: 5px;">
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Horário de Atendimento</h4>
+                            <p>Segunda a Segunda, 9h às 21h</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/vtech_019/" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://w.app/ebbocy" target="_blank" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3 style="color: #000000; margin-bottom: 30px;">Entre em Contato</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label">Nome</label>
+                            <input type="text" class="form-input" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">WhatsApp</label>
+                            <input type="tel" class="form-input" placeholder="(19) 99999-9999" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Modelo de Interesse</label>
+                            <select class="form-input" required>
+                                <option value="">Selecione um modelo</option>
+                                <option value="iPhone 15">iPhone 15 Series</option>
+                                <option value="iPhone 14">iPhone 14 Series</option>
+                                <option value="iPhone 13">iPhone 13 Series</option>
+                                <option value="iPhone 12">iPhone 12 Series</option>
+                                <option value="iPhone 11">iPhone 11 Series</option>
+                                <option value="Outro">Outro modelo</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Mensagem</label>
+                            <textarea class="form-input" rows="4" placeholder="Olá, gostaria de informações sobre..."></textarea>
+                        </div>
+                        <button type="submit" id="whatsappSubmit" class="cta-button" style="width: 100%; justify-content: center;">
+                            <i class="fab fa-whatsapp"></i>
+                            Enviar pelo WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-icon" style="width: 40px; height: 40px;">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        VTECH
+                    </div>
+                    <p class="footer-description">Referência em produtos Apple em Campinas-SP, oferecendo tecnologia premium com atendimento especializado.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/vtech_019/" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://w.app/ebbocy" target="_blank" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">iPhones</h4>
+                    <ul class="footer-links">
+                        <li><a href="#products">iPhone 15 Series</a></li>
+                        <li><a href="#products">iPhone 14 Series</a></li>
+                        <li><a href="#products">iPhone 13 Series</a></li>
+                        <li><a href="#products">iPhone 12 Series</a></li>
+                        <li><a href="#products">iPhone 11 Series</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">VTECH</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">Sobre Nós</a></li>
+                        <li><a href="#products">Nossos iPhones</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                        <li><a href="#products">Garantia</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Atendimento</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Campinas e região</li>
+                        <li><i class="fab fa-whatsapp"></i> (19) 99180-3390</li>
+                        <li><i class="fas fa-clock"></i> Seg-Seg: 
